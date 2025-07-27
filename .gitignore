@@ -1,0 +1,44 @@
+
+# Node modules
+node_modules/
+
+# Playwright test result folders
+test-results/
+playwright-report/
+playwright/.cache/
+
+# VSCode settings
+.vscode/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+
+# Jest cache (if used)
+.jest/
+
+# Output folders
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE folders
+.idea/
