@@ -27,5 +27,6 @@ test('dropdown', async ({ page }) => {
     await expect(options.length).toBe(10)
 
     // Presence of option - Approch 3
+    
 
 })

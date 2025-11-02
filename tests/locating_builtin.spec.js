@@ -15,7 +15,6 @@ test('Built-inLocators', async ({ page }) => {
     await page.getByPlaceholder('Password').fill("admin123")
     await page.waitForTimeout(3000)
 
-
     // to click on the submit button (by clicking on button is role & passeed the type attribute is submit)
     await page.getByRole('button', { type: 'submit' }).click()
 
