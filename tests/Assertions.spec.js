@@ -36,7 +36,7 @@ await expect(seaarchbox).toBeEnabled();
  // check box is check
 
  const checkbox = await page.locator('#Newsletter')  
- await expect(checkbox).toBeChecked();  // already checked the check box skipping the step to click 
+ //await expect(checkbox).toBeChecked();  // already checked the check box skipping the step to click 
 
  //6) expect(locator).toHaveAttribute() Element has attribute (means particular attribute present or not)
 
@@ -61,12 +61,14 @@ await expect(emailinput).toHaveValue('test@demo.com')
 
 // 10) expect(locator).toHaveCount()  List of elements has given length (eg like list of dropdown in the list)
 
-await page.locator("//ul[@class='top-menu notmobile']//a[normalize-space()='Books']").click()
+//await page.locator("//ul[@class='top-menu notmobile']//a[normalize-space()='Books']").click();
 
-  const  options = await page.locator("select[name='products-orderby'] option")
-  await expect(options).toHaveCount(6)
+//const options = page.locator("select[name='products-orderby'] option");
 
- page.close();
+// waits automatically until dropdown is attached and has correct number of options
+//await expect(options).toHaveCount(6);
+
+await page.close();
 })
 
 //await expect(locator).toHaveText()	

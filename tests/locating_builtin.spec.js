@@ -1,6 +1,5 @@
-const { test, expect } = require('@playwright/test')
-
-test('Built-inLocators', async ({ page }) => {
+import { test, expect } from '@playwright/test';
+test('locatingbuiltin', async ({page})=> { 
 
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
@@ -14,7 +13,6 @@ test('Built-inLocators', async ({ page }) => {
     await page.waitForTimeout(3000)
     await page.getByPlaceholder('Password').fill("admin123")
     await page.waitForTimeout(3000)
-
     // to click on the submit button (by clicking on button is role & passeed the type attribute is submit)
     await page.getByRole('button', { type: 'submit' }).click()
 
@@ -22,7 +20,7 @@ test('Built-inLocators', async ({ page }) => {
     const name = await page.locator('//p[@class="oxd-userdropdown-name"]').textContent()// to get the text of the element
     await expect(page.getByText(name)).toBeVisible() //  to check the text (name) is present or not as well to locate the inner text
     await page.getByRole('menuitem', { name: 'Logout' }).click();
-    console.log("Extracted name is:", name);
+    console.log("Extracted name is:", name); // to console
 
      
     const title = await page.title();
@@ -33,3 +31,6 @@ test('Built-inLocators', async ({ page }) => {
 
 // logo return the element and made variable as const locater is css selector
 // here checked element visbible or not here calling the function
+// to get the text of the element
+// to check the text (name) is present or not as well to locate the inner text
+
